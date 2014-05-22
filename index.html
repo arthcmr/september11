@@ -1,0 +1,99 @@
+<!--
+TRABALHO FINAL DE VISUALIZACAO DE DADOS
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Visualização de Dados - TP1</title>
+		<!-- jQuery -->
+		<script src="js/jquery.min.js" language="javascript"></script>
+		<!-- jQuery -->
+		<script src="js/config.js" language="javascript"></script>
+		
+		<script src="js/functions.js" language="javascript"></script>
+		<script src="js/visualization.js" language="javascript"></script>
+		<script src="js/data.js" language="javascript"></script>
+		<script src="js/exec.js" language="javascript"></script>
+				
+
+		
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		
+	</head>
+	
+	
+	<body>
+	
+		<h1>11 de Setembro, 2001</h1>
+		<p>Arthur Câmara, Fernando Calazans, Gabriel Uber, Rodolfo Fortes, Thompson Moreira</p>
+	
+		<div id="ano"></div>
+	
+		<div id="title">As mensagens a seguir são de pagers de NYC no dia 11/09/2001. Selecione as palavras que deseja comparar e visualize o número de mensagens enviadas.</div>
+		<div class="spacer"></div>
+		
+		<div id="visualization">
+		
+			<div class="line" id="line7"><div class="label">17:21 - Colapso total do WTC</div></div>
+			<div class="line" id="line6"><div class="label">10:28 - Torre Norte desaba</div></div>
+			<div class="line" id="line5"><div class="label">10:03 - Voo United 93 cai</div></div>
+			<div class="line" id="line4"><div class="label">09:59 - Torre Sul desaba</div></div>
+			<div class="line" id="line3"><div class="label">09:37 - Pentágono atingido</div></div>
+			<div class="line" id="line2"><div class="label">09:03 - Torre Sul atingida</div></div>
+			<div class="line" id="line1"><div class="label">08:46 - Torre Norte atingida</div></div>
+		
+			<div id="choosewords" >
+				<p><input type="button" class="btn" id="esconder" onclick="showHideLines()" value="Esconder anotações" /></p>
+				<p>Escolha a palavra abaixo:</p>
+				<select id="selectwords" onchange="AddWord();">
+					<option selected="selected" class="first">Selecione a palavra:</option>
+				</select>
+				
+			</div>
+		
+			<div id="graph">
+				<canvas id="canvas" width="910" height="100"></canvas>
+			</div>
+			
+			<div id="words">
+				<p style="font-size: 10px; text-transform: uppercase; color: #999;">Duplo clique para remover</p>
+			</div>
+			
+			<div id="hours">
+				<div id="hour7" class="hour"></div>
+				<div id="hour8" class="hour"></div>
+				<div id="hour9" class="hour"></div>
+				<div id="hour10" class="hour"></div>
+				<div id="hour11" class="hour"></div>
+				<div id="hour12" class="hour"></div>
+				<div id="hour13" class="hour"></div>
+				<div id="hour14" class="hour"></div>
+				<div id="hour15" class="hour"></div>
+				<div id="hour16" class="hour"></div>
+				<div id="hour17" class="hour"></div>
+				<div id="hour18" class="hour"></div>
+				<div id="hour19" class="hour"></div>
+			</div>
+			
+			<div id="totallabel">Mensagens com estas palavras:</div>
+			
+			<div id="total">
+				<div id="total7" class="total"></div>
+				<div id="total8" class="total"></div>
+				<div id="total9" class="total"></div>
+				<div id="total10" class="total"></div>
+				<div id="total11" class="total"></div>
+				<div id="total12" class="total"></div>
+				<div id="total13" class="total"></div>
+				<div id="total14" class="total"></div>
+				<div id="total15" class="total"></div>
+				<div id="total16" class="total"></div>
+				<div id="total17" class="total"></div>
+				<div id="total18" class="total"></div>
+				<div id="total19" class="total"></div>
+			</div>
+		</div>
+
+	</body>
+</html>
